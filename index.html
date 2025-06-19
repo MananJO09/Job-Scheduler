@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Scheduler (Priority-based)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Job Scheduler (Priority-based)</h1>
+
+  <div class="card">
+    <h2>Add a Job</h2>
+    <input type="text" id="jobId" placeholder="Job ID" />
+    <input type="number" id="deadline" placeholder="Deadline" />
+    <input type="number" id="profit" placeholder="Profit" />
+    <input type="number" id="priority" placeholder="Priority (Higher = Better)" />
+    <input type="number" id="executionTime" placeholder="Execution Time (in mins)" />
+
+    <button onclick="addJob()">Add Job</button>
+  </div>
+
+  <div class="card job-list">
+    <h2>Jobs Entered</h2>
+    <ul id="jobList"></ul>
+  </div>
+
+  <button onclick="runGreedySchedule()">Run Greedy Scheduling</button>
+
+  <div class="card">
+    <h2>Worker Assignment</h2>
+    <input type="number" id="workerCount" placeholder="Number of workers" />
+    <button onclick="assignJobsToWorkers()">Assign Jobs to Workers</button>
+    <div id="workerAssignments"></div>
+  </div>
+  
+  <div class="card scheduled-jobs">
+    <h2>Scheduled Jobs</h2>
+    <ul id="scheduledJobs"></ul>
+    <p id="totalProfit"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
